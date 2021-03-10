@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script src="list.js"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    
+    </head>
+    <body>
+        <header>
+            <div class="header">
+                <div class="container header-container">
+                    <div class="header_section">
+                        <div class="headerLogo header__item">MySite</div>
+                        <div class="header__item" id="dropdown_1"><button onclick="dropFunction()" class = "dropbtn"><a href="#" target="_blank">News</a></button></div>
+                        <div class="header__item" id="dropdown_2"><button><a href="#" target="_blank">Catalog</a></button></div>
+                        <div class="header__item" id="dropdown_3"><button><a href="#" target="_blank">Prices</a></button></div>
+                        <div class="header__item" id="dropdown_4"><button><a href="#" target="_blank">About</a></button></div>
+                        <div class="header__item" id="dropdown_5"><button><a href="create.html">Create</a></button></div>
+                    </div>
+                    <div class="header_section">
+                        <div class="header__item" id="dropdown_6"><button><a href="#" target="_blank">Settings</a></button></div>
+                        <div class="header__item" id="dropdown_7"><button><a href="#" target="_blank">Log In</a></button></div>  
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="container content-container">
+            <div class="tasks">
+                <div class="tasks-list" id="tasks-list"> </div>
+            </div>
+        </div>
+        <footer>
+            <div class="footer"><p class="footer-paragraph">2021 All rights reserved</p></div>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,34 @@
+<DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script src="create.js"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    </head>
+    <body>
+
+        <div>
+            <form>
+                <input id="title" type="text" size="40" value="" placeholder="Type title here...">
+                <input id="description" type="text" size="40" value="" placeholder="Type description here...">
+                <!-- <input id="urgency" type="text" size="40" value="" placeholder="Type urgency here...">  -->
+                <select id="urgency" required>
+                    <option value="" disabled selected>Select urgency here...</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                <div class="buttonArea">
+                    <button id="back" type="button" class="backButton"><a href="index.html" >Back</a></button>
+                    <button id="submit" type="button" class="submitButton">Save</button>
+                </div>
+            </form>
+
+        </div>
+    </body>
+</html>
