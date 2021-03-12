@@ -9,26 +9,47 @@
         <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     </head>
     <body>
-
-        <div>
-            <form>
-                <input id="title" type="text" size="40" value="" placeholder="Type title here...">
-                <input id="description" type="text" size="40" value="" placeholder="Type description here...">
-                <!-- <input id="urgency" type="text" size="40" value="" placeholder="Type urgency here...">  -->
-                <select id="urgency" required>
-                    <option value="" disabled selected>Select urgency here...</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </select>
-                <div class="buttonArea">
-                    <button id="back" type="button" class="backButton"><a href="index.html" >Back</a></button>
-                    <button id="submit" type="button" class="submitButton">Save</button>
+        <div class="wrapper">
+            <header>
+                <div class="header">
+                    <div class="container header-container">
+                        <div class="header_section">
+                            <div class="headerLogo header__item">MySite</div>
+                            <div class="header__item" id="dropdown_1"><button onclick="dropFunction()" class = "dropbtn"><a href="#" target="_blank">News</a></button></div>
+                            <div class="header__item" id="dropdown_2"><button><a href="#" target="_blank">Catalog</a></button></div>
+                            <div class="header__item" id="dropdown_3"><button><a href="#" target="_blank">Prices</a></button></div>
+                            <div class="header__item" id="dropdown_4"><button><a href="#" target="_blank">About</a></button></div>
+                        </div>
+                        <div class="header_section">
+                            <div class="header__item" id="dropdown_6"><button><a href="#" target="_blank">Settings</a></button></div>
+                            <div class="header__item" id="dropdown_7"><button><a href="#" target="_blank">Log In</a></button></div>  
+                        </div>
+                    </div>
                 </div>
-            </form>
-
+            </header>
+            <div class="container content-container">
+                <div class="tasks">
+                    <form>
+                        <input id="title" type="text" value="" placeholder="Type title here...">
+                        <input id="description" type="text" value="" placeholder="Type description here...">
+                        <select id="urgency" required>
+                            <option value="" disabled selected>Select urgency here...</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                        <div class="buttonArea">
+                            <button id="back" type="button" class="backButton"><a href="index.html" >Back</a></button>
+                            <button id="submit" type="button" class="submitButton">Save</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <footer>
+                <div class="footer"><p class="footer-paragraph">2021 All rights reserved</p></div>
+            </footer>
         </div>
     </body>
 </html>
