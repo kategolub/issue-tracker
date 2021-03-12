@@ -6,16 +6,16 @@ let express = require('express'),
     mongoose = restful.mongoose,
     cors = require('cors')
 
-let app = express();
+let app = express()
 
 app.use(cors()) 
-app.use(morgan('dev'));
-app.use(bodyParser.urlencoded({'extended':'true'}));
-app.use(bodyParser.json());
-app.use(bodyParser.json({type:'application/vnd.api+json'}));
-app.use(methodOverride());
+app.use(morgan('dev'))
+app.use(bodyParser.urlencoded({'extended':'true'}))
+app.use(bodyParser.json())
+app.use(bodyParser.json({type:'application/vnd.api+json'}))
+app.use(methodOverride())
 
-mongoose.connect("mongodb+srv://admin:admin@cluster0.lulqk.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
+mongoose.connect("mongodb+srv://admin:admin@cluster0.lulqk.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
  
 let Task = app.resource = restful.model('task', mongoose.Schema(
     {
@@ -27,9 +27,9 @@ let Task = app.resource = restful.model('task', mongoose.Schema(
         timestamps: true 
     }
   ))
-  .methods(['get', 'post', 'put', 'delete']);
+  .methods(['get', 'post', 'put', 'delete'])
 
 
-Task.register(app, '/tasks');
+Task.register(app, '/tasks')
 
-app.listen(3000);
+app.listen(3000)
