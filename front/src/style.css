@@ -101,7 +101,7 @@ button:hover {
 	background-color: #304e98;
 }
 
-button {
+button:enabled {
 	padding: 10px 15px;
 	font-size: 20px;
 	margin: 0px 0px 0px 5px;
@@ -109,11 +109,23 @@ button {
 	text-decoration: none;
     color: #fff;
     border-radius: 4px;
+    cursor: auto;
+}
+
+button:hover:enabled {
+	background-color: #ff9900;
     cursor: pointer;
 }
 
-button:hover {
-	background-color: #ff9900;
+button:disabled {
+	padding: 10px 15px;
+	font-size: 20px;
+	margin: 0px 0px 0px 5px;
+	text-decoration: none;
+    background-color: #ccc;
+    color: #585353;
+    border-radius: 4px;
+    cursor: auto;
 }
 
 .inputText {
@@ -219,7 +231,7 @@ input[type=text], select {
     border-radius: 4px;
     box-sizing: border-box;
 }
-  
+
 form {
     width: 50%;
     margin: 0 auto;
@@ -232,15 +244,16 @@ form {
     margin: 10px auto;
 }
 
-.backButton {
+#back {
     background-color: #ccc;
 }
 
 .backButton>a {
-    background-color: inherit;
+    background-color: #ccc;
     color: #585353;
 }
 
 .task-action>button {
     background-color: #f3f2f2;
 }
+

@@ -47,7 +47,7 @@ function renderList(rootElement, tasks) {
         taskContent.innerHTML = `<p>ID: ${task._id}</p>
                                 <p>Title: ${task.title}</p>
                                 <p>Description: ${task.description}</p>
-                                <p>Urgency: ${task.urgency}</p>
+                                <p>Urgency: P${task.urgency}</p>
                                 <p>Last Updated: ${new Date(task.updatedAt).toLocaleString()}</p>`      
         taskElement.append(taskContent)
 
