@@ -29,19 +29,19 @@
             </header>
             <div class="container content-container">
                 <div class="tasks">
-                    <form>
-                        <input id="title" type="text" value="" placeholder="Type title here...">
-                        <input id="description" type="text" value="" placeholder="Type description here...">
+                    <form id="form">
+                        <input id="title" type="text" value="" placeholder="Type title here..." required>
+                        <input id="description" type="text" value="" placeholder="Type description here..." required>
                         <select id="urgency" required>
                             <option value="" disabled selected>Select urgency here...</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
+                            <option value="0">P0</option>
+                            <option value="1">P1</option>
+                            <option value="2">P2</option>
+                            <option value="3">P3</option>
+                            <option value="4">P4</option>
                         </select>
                         <div class="buttonArea">
-                            <button id="back" type="button" class="backButton"><a href="index.html" >Back</a></button>
+                            <button id="back" type="button" class="backButton"><a href="index.html">Back</a></button>
                             <button id="submit" type="button" class="submitButton">Save</button>
                         </div>
                     </form>
