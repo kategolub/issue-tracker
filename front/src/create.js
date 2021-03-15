@@ -29,6 +29,5 @@ document.addEventListener("DOMContentLoaded", function() {
       .reduce((result, current) => result || !current, false)
 
     submitButton.disabled = disabled
-    console.log(disabled)
   }
 })
