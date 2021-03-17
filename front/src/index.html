@@ -5,7 +5,7 @@
         <link rel="stylesheet" href="style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
-        <script src="list.js"></script>
+        <script type="module" src="list.js"></script>
         <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     </head>
     <body>
@@ -23,7 +23,7 @@
                         </div>
                         <div class="header_section">
                             <div class="header__item" id="dropdown_6"><button><a href="#" target="_blank">Settings</a></button></div>
-                            <div class="header__item" id="dropdown_7"><button><a href="#" target="_blank">Log In</a></button></div>  
+                            <div class="header__item" id="dropdown_7"><button><a href="#" target="_blank">Log In</a></button></div>
                         </div>
                     </div>
                 </div>
@@ -32,15 +32,16 @@
                 <div class="tasks">
                     <div class="main" id="main">
                         <div class="tasks-list" id="tasks-list">
-                            <div class="tasks-list-1" id="tasks-list-1"></div>
-                            <div class="tasks-list-2" id="tasks-list-2"></div>
-                            <div class="tasks-list-3" id="tasks-list-3"></div>
+                            <div class="tasks-list-1" id="tasks-list-1"><div class="paragraph-container"><p class="paragraph-urgency">Low Priority Tasks</p></div></div>
+                            <div class="tasks-list-2" id="tasks-list-2"><div class="paragraph-container"><p class="paragraph-urgency">Medium Priority Tasks</p></div></div>
+                            <div class="tasks-list-3" id="tasks-list-3"><div class="paragraph-container"><p class="paragraph-urgency">High Priority Tasks</p></div></div>
                         </div>
                     </div>
                 </div>
             </div>
             <footer>
                 <div class="footer"><p class="footer-paragraph">2021 All rights reserved</p></div>
-            </footer> 
+            </footer>
+        </div>
     </body>
-</html> 
+</html>
