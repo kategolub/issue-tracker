@@ -1,4 +1,8 @@
+import { Toast } from "./toast.js"
+
 document.addEventListener("DOMContentLoaded", function() {
+    Toast.init()
+
     getTasksList({ urgency__in: "1" })
         .then(tasks => {
             renderList(document.getElementById("tasks-list-1"), tasks)
@@ -10,18 +14,19 @@ document.addEventListener("DOMContentLoaded", function() {
     getTasksList({ urgency__in: "4,5" })
         .then(tasks => {
             renderList(document.getElementById("tasks-list-3"), tasks)
-        })
+        })           
 })
 
-function removeTask(id) {
+window.removeTask = function removeTask(id) {
     axios.delete(`http://localhost:3000/tasks/${id}`)
-      .then(function (response) {
-        location.reload()
-        return false
-      })
-      .catch(function (error) {
+    .then(() => {
+        document.getElementById(`task-${id}`).remove()
+        Toast.show(`Task "${id}" has been successfully deleted.`, "success")
+    })
+    .catch(error => {
         console.log(error)
-      })
+        Toast.show(`Failed to delete task "${id}".`, "error")
+    })
 }
 
 function getTasksList(filters) {
@@ -32,7 +37,7 @@ function getTasksList(filters) {
         }
     })
     .then(response => response.data) 
-    .catch(function (error) {
+    .catch(error => {
         console.log(error)
     })
 }
@@ -41,6 +46,7 @@ function renderList(rootElement, tasks) {
     for(let task of tasks) {
         let taskElement = document.createElement('div')
         taskElement.className = "task"
+        taskElement.setAttribute("id", `task-${task._id}`)
 
         let taskContent = document.createElement('div')
         taskContent.className = "task-content"

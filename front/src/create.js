@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
           urgency: urgencySelect.value
         })
         .then(function (response) {
-          window.location.replace('index.html')
+          window.location.assign('index.html')
           console.log("sfdsfgdg")
         })
         .catch(function (error) {

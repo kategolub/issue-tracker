@@ -40,7 +40,6 @@ let taskSchema = mongoose.Schema(
 )
 
 let Task = app.resource = restful.model('task', taskSchema).methods(['get', 'post', 'put', 'delete'])
-
 Task.register(app, '/tasks')
 
 app.listen(3000)
