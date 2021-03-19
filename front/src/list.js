@@ -1,8 +1,8 @@
 import { Toast } from "./toast.js"
+let toast
 
 document.addEventListener("DOMContentLoaded", function() {
-    Toast.init()
-
+    toast = new Toast()
     getTasksList({ urgency__in: "1" })
         .then(tasks => {
             renderList(document.getElementById("tasks-list-1"), tasks)
@@ -21,11 +21,11 @@ window.removeTask = function removeTask(id) {
     axios.delete(`http://localhost:3000/tasks/${id}`)
     .then(() => {
         document.getElementById(`task-${id}`).remove()
-        Toast.show(`Task "${id}" has been successfully deleted.`, "success")
+        toast.show(`Task "${id}" has been successfully deleted.`, "success")
     })
     .catch(error => {
         console.log(error)
-        Toast.show(`Failed to delete task "${id}".`, "error")
+        toast.show(`Failed to delete task "${id}".`, "error")
     })
 }
 

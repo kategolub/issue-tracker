@@ -1,4 +1,11 @@
-document.addEventListener("DOMContentLoaded", function() {  
+const urgencyValues = {
+    P0: "1",
+    P1: "2",
+    P2: "3",
+    P3: "4",
+    P4: "5",
+}
+document.addEventListener("DOMContentLoaded", function() {
   const titleInput = document.getElementById("title")
   const descriptionInput = document.getElementById("description")
   const urgencySelect = document.getElementById("urgency")       
