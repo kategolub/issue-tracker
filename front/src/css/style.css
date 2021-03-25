@@ -19,7 +19,6 @@
     --body: #eaeaea;
     --button-orange: #ff9900;
     --black: #000000;
-
 }
 :focus, :active { outline:none; }
 
@@ -111,6 +110,10 @@ button:hover {
 	background-color: var(--blue);
 }
 
+img {
+    cursor: pointer;
+}
+
 button {
 	padding: 10px 15px;
 	font-size: 20px;
@@ -153,41 +156,19 @@ button:disabled {
     box-sizing: border-box;
 	font-size: 24px;
 	line-height: 30px;
-	color: var(--white);
+	color: var(--black);
     box-shadow: 0 0 8px 0 rgba(34, 60, 80, 0.15);
-    position: relative
-} 
-
-.main {
-    height: 100%;
-    width: 100%;
+    position: relative;
     background-repeat: no-repeat;
     background-position: 50% 50%;
     border-radius: 10px;
-}
-
-.tasks-list {
-    width: 100%;
-    height: 100%;
-    padding: 0;
-    color: var(--black);
     max-height: 600px;
     overflow: scroll;
     display: flex;
     flex-direction: row;
 }
 
-.tasks-list-1 {
-    width: 33%;
-    flex: 0 0 33%;
-}
-
-.tasks-list-2 {
-    width: 33%;
-    flex: 0 0 33%;
-}
-
-.tasks-list-3 {
+.tasks-column {
     width: 33%;
     flex: 0 0 33%;
 }
@@ -246,19 +227,19 @@ form {
     margin: 0 auto;
 }
 
-.buttonArea {
+.button-area {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     margin: 10px auto;
 }
 
-.backButton {
+.back-button {
     background-color: var(--light-gray);
     border: 1px solid var(--gray);
 }
 
-.backButton>a {
+.back-button>a {
     background-color: inherit;
     color: #585353;
 }
@@ -284,17 +265,14 @@ form {
     left: 0;
     right: 0;
     margin: auto;
-  
     max-width: 400px;
     padding: 20px;
     background: var(--gray);
     color: #333333;
-    font-family: sans-serif;
     text-align: center;
     border: 1px solid #aaaaaa;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  
     visibility: hidden;
     opacity: 0;
     transition: opacity 0.3s, bottom 0.3s, visibility 0.3s;
@@ -318,3 +296,4 @@ form {
     border-color: #ba0000;
     color: var(--white);
   }
+
